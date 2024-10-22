@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Comic Neue", cursive;
+            font-weight: 100;
+            background-color: black;
+        }
+
+        .reality {
+            background: url(reality.png);
+            width: 100%;
+            /* height: 100%; */
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            aspect-ratio: 1920 / 1080;
+        }
+
+        #reality {
+            background-color: transparent;
+            position: absolute;
+            left: 36%;
+            top: 25%;
+            right: 32%;
+            bottom: 43%;
+            font-size: 2rem;
+            border: 0;
+            font-family: "Comic Neue", cursive;
+            font-weight: 100;
+        }
+
+        #reality:focus {
+            outline: none;
+        }
+
+        .sanity {
+            position: absolute;
+            bottom: 3.5%;
+            left: 50%;
+            right: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* gap: 10px; */
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .sanity>div {
+            max-width: 400px;
+            width: 100vw;
+        }
+
+        .reality-img {
+            width: 32px;
+            height: 32xpx;
+            border-radius: 999px;
+        }
+
+        .reality-floater {
+            position: absolute;
+            left: 50%;
+            bottom: 7%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .realities {
+            width: 100vw;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .realities > img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 992px) {
+            #reality {
+                font-size: 14px;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            #reality {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            #reality {
+                font-size: 10px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            #reality {
+                font-size: 8px;
+            }
+        }
+    </style>
+
+    <title>Reality</title>
+
+</head>
+
+<body>
+    <div class="reality">
+        <textarea id="reality"></textarea>
+
+
+
+        <div class="reality-floater">
+            <a href="https://dexscreener.com/solana/d2qaatrwwqa8b2xa5hj8bio23x5klpgkkpc7qapx2w2f" target="_blank" rel="noopener nereferrer"><img src="dexscreener.webp" class="reality-img"
+                    alt="dexscreener"></a>
+            <a href="https://t.me/realityexplained" target="_blank" rel="noopener nereferrer"><img src="telegram.webp" class="reality-img"
+                    alt="telegram"></a>
+            <a href="https://x.com/realityxplained" target="_blank" rel="noopener nereferrer"><img src="twitter.avif" class="reality-img"
+                    alt="twitter"></a>
+        </div>
+        <div class="sanity">
+            <div>Email: realityxplained@ai.com</div>
+        </div>
+    </div>
+    <div class="realities">
+        <img src="images/reality-001.jpg" alt="Reality">
+        <img src="images/reality-awaken.jpg" alt="Reality">
+        <img src="images/reality-biocore.png" alt="Reality">
+        <img src="images/reality-empty.jpg" alt="Reality">
+        <img src="images/reality-eye.png" alt="Reality">
+        <img src="images/reality-geometra.png" alt="Reality">
+        <img src="images/reality-internal.jpg" alt="Reality">
+        <img src="images/reality-intruded.jpg" alt="Reality">
+        <img src="images/reality-kunda.png" alt="Reality">
+        <img src="images/reality-levelsofconsciousness.png" alt="Reality">
+        <img src="images/reality-mantra.png" alt="Reality">
+        <img src="images/reality-projection.jpg" alt="Reality">
+        <img src="images/reality-sigil.png" alt="Reality">
+        <img src="images/reality-ynyang.png" alt="Reality">
+    </div>
+
+
+    <script>
+
+
+
+        const txt = document.getElementById('reality');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            txt.value = localStorage.getItem('reality');
+
+
+
+        })
+
+
+        txt.addEventListener('input', function () {
+            localStorage.setItem('reality', this.value)
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
